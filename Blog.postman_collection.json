@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "7a6754bc-340b-4c00-a187-c3e02e396827",
+		"name": "Blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22372448"
+	},
+	"item": [
+		{
+			"name": "Create Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "jwt_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJuYW1lIjoic3VkZWVwMDAxIiwiZW1haWwiOiIwMDFAZ21haWwuY29tIn0sImlhdCI6MTY5NzQ0MjI0NywiZXhwIjoxNjk3NTI4NjQ3fQ.C4ePDqQYsCvmJJWIo-FrbUqAwb2pkOzemLzesYxQUeE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"sudeeptwo post title this is my second post\",\r\n    \"description\": \"sudeep 002 post desc this is the desc fot second post\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user/1/post",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"1",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "jwt_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjIsInVzZXJuYW1lIjoic3VkZWVwMDAyIiwiZW1haWwiOiIwMDJAZ21haWwuY29tIn0sImlhdCI6MTY5NzQ0MjY0NiwiZXhwIjoxNjk3NTI5MDQ2fQ.GI-pCXHa69SmXfvC8yuUAxMJQLyVOJAqUy0r8tQM0ns",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"this comment no 1 created by sudeep001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user/1/post/1/comment",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"1",
+						"post",
+						"1",
+						"comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"sudeep001\",\r\n    \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"sudeep001\",\r\n    \"password\": \"123\",\r\n    \"email\": \"001@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detailed Post Specific User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "jwt_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJuYW1lIjoic3VkZWVwMDAxIiwiZW1haWwiOiIwMDFAZ21haWwuY29tIn0sImlhdCI6MTY5NzQ0MjI0NywiZXhwIjoxNjk3NTI4NjQ3fQ.C4ePDqQYsCvmJJWIo-FrbUqAwb2pkOzemLzesYxQUeE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/user/1/post/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"1",
+						"post",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ALL Posts Specific User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "jwt_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJuYW1lIjoic3VkZWVwMDAxIiwiZW1haWwiOiIwMDFAZ21haWwuY29tIn0sImlhdCI6MTY5NzQ0MjI0NywiZXhwIjoxNjk3NTI4NjQ3fQ.C4ePDqQYsCvmJJWIo-FrbUqAwb2pkOzemLzesYxQUeE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/user/1/post/all",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"1",
+						"post",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
